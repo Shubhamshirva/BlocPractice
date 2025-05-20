@@ -10,4 +10,5 @@ Flutter version for this project is 3.29.2 '
 This practice project is made using bloc state management
 
 A few resources to get you started if this is your first Flutter project:
+flutter version is 3.29.2 
 
