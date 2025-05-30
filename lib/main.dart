@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice/bloc/favourite_bloc/favourite_app_bloc.dart';
@@ -16,7 +17,10 @@ import 'package:practice/ui/posts/post_screen.dart';
 import 'package:practice/utils/image_picker_utils.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(builder: (context) => const MyApp(),)
+    // const MyApp()
+    );
 }
 
 class MyApp extends StatelessWidget {

@@ -56,16 +56,19 @@ class _PostScreenState extends State<PostScreen> {
                     child: state.searchMessage.isNotEmpty?
                      Center(child: Text(state.searchMessage.toString()))
                      : ListView.builder(
+                      scrollDirection: Axis.vertical,
                       itemCount: state.temPostList.isEmpty ? state.postList.length : state.temPostList.length,
                       itemBuilder: (context, index){
                         if(state.temPostList.isNotEmpty) {
                            final item = state.temPostList[index];
-                              return Card(
-                                child: ListTile(
-                                  title: Text(item.email.toString()),
-                                  subtitle: Text(item.body.toString()),
-                                                    
-                                                    
+                              return SingleChildScrollView(
+                                child: Card(
+                                  child: ListTile(
+                                    title: Text(item.email.toString()),
+                                    subtitle: Text(item.body.toString()),
+                                                      
+                                                      
+                                  ),
                                 ),
                               );
 
